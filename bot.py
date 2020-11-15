@@ -8,6 +8,8 @@ from discord.ext import commands
 client = commands.Bot(command_prefix='!')
 # ---------------
 
+# Bot commands and functionality
+
 @client.command(name='version')
 async def version(context):
         print('here')
@@ -28,7 +30,7 @@ async def react(context):
 async def sourcecode(context):
 
         myEmbed = discord.Embed(title="NuggetBot.py", description="NuggetBot.py sourcecode on GitHub", color=0x00ff00)
-        myEmbed.add_field(name="Github-link:", value="https://github.com/OfficialJansku/NuggetBot.git", inline=False)
+        myEmbed.add_field(name="Github-link:", value="https://officialjansku.github.io/NuggetBot.github.io/", inline=False)
         myEmbed.add_field(name="Bot version:", value="V1.0.1", inline=False)
         myEmbed.set_author(name="JANSKU")
 
@@ -64,18 +66,18 @@ async def bot(context):
     await context.message.channel.send(embed=myEmbed)
 
 
-
+# ---------------
 
 @client.event
 async def on_ready():
 
     # Do stuff
 
-    await client.change_presence(status=discord.Status.do_not_disturb, activity=discord.Game('use !help for help with commands, and NuggetBot.py project can be found with !sourcecode'))
+    await client.change_presence(status=discord.Status.do_not_disturb, activity=discord.Game('use !commands for help with commands, and NuggetBot.py project can be found with !sourcecode'))
 
 
 # ---------------
 
 # Run the client on the server
-client.run('your client id here')
+client.run('client id here')
 # ---------------
