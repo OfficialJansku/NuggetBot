@@ -1,37 +1,34 @@
-## Welcome to GitHub Pages
+## NuggetBot.py for Discord
 
-You can use the [editor on GitHub](https://github.com/OfficialJansku/NuggetBot.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This is a Discord bot for Discord for doing admin stuff, and whatever I'll add to it on future.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Bot was originally made for my own server as for fun and also doing admin things when im not online.
 
-### Markdown
+### Help for installing bot
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+You need latest version of the Python installed to your machine and also Discord python extension.
+
+### Windows installation
+
+Download Python from the link:
+https://www.python.org/downloads/windows/
+
+to install a Discord extension go to VSCode or Powershell and use this:
 
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+pip3 install discord
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Linux installation
 
-### Jekyll Themes
+Download Python using this command on your terminal
+```markdown
+$ sudo apt-get install python3
+```
+To install discord python extension use this on your terminal
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/OfficialJansku/NuggetBot.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+```markdown
+$ sudo pip3 install discord
+```
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
