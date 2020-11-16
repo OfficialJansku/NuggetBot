@@ -13,13 +13,27 @@ client = commands.Bot(command_prefix='!')
 @client.command(name='version')
 async def version(context):
         print('here')
-        myEmbed = discord.Embed(title="Current Version", description="This build is version 1.0.1", color=0x00ff00)
-        myEmbed.add_field(name="Version Code:", value="1.0.1", inline=False)
+        myEmbed = discord.Embed(title="Current Version", description="This build is version 1.0.2", color=0x00ff00)
+        myEmbed.add_field(name="Version Code:", value="1.0.2", inline=False)
         myEmbed.add_field(name="Date Released:", value="November 15th, 2020", inline=False)
         myEmbed.set_footer(text="If you want to try this bot, please type !sourcecode to clone or inspect this.")
         myEmbed.set_author(name="JANSKU")
 
         await context.message.channel.send(embed=myEmbed)
+
+@client.command(name='kick', pass_context = True)
+@commands.has_permissions(kick_members=True)
+async def kick(context, member: discord.Member):
+
+    await member.kick()
+    await context.send('User ' + member.display_name + ' has been kicked.')
+    
+@client.command(name='ban', pass_context = True)
+@commands.has_permissions(kick_members=True)
+async def ban(context, member: discord.Member, *, reason=None):
+
+    await member.kick()
+    await context.send('User ' + member.display_name + ' has been banned.')     
 
 
 @client.command(name='react')
@@ -31,7 +45,7 @@ async def sourcecode(context):
 
         myEmbed = discord.Embed(title="NuggetBot.py", description="NuggetBot.py sourcecode on GitHub", color=0x00ff00)
         myEmbed.add_field(name="Github-link:", value="https://officialjansku.github.io/NuggetBot.github.io/", inline=False)
-        myEmbed.add_field(name="Bot version:", value="V1.0.1", inline=False)
+        myEmbed.add_field(name="Bot version:", value="V1.0.2", inline=False)
         myEmbed.set_author(name="JANSKU")
 
         await context.message.channel.send(embed=myEmbed)
@@ -45,7 +59,6 @@ async def commands(context):
     
 
     await context.message.channel.send(embed=myEmbed)
-
 
 @client.command(name='bot')
 async def bot(context):
