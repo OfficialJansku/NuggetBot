@@ -13,9 +13,9 @@ client = commands.Bot(command_prefix='!')
 @client.command(name='version')
 async def version(context):
         print('here')
-        myEmbed = discord.Embed(title="Current Version", description="This build is version 1.0.2", color=0x00ff00)
-        myEmbed.add_field(name="Version Code:", value="1.0.2", inline=False)
-        myEmbed.add_field(name="Date Released:", value="November 15th, 2020", inline=False)
+        myEmbed = discord.Embed(title="Current Version", description="This build is version 1.0.3", color=0x00ff00)
+        myEmbed.add_field(name="Version Code:", value="1.0.3", inline=False)
+        myEmbed.add_field(name="Date Released:", value="April 26th of 2021", inline=False)
         myEmbed.set_footer(text="If you want to try this bot, please type !sourcecode to clone or inspect this.")
         myEmbed.set_author(name="JANSKU")
 
@@ -40,12 +40,24 @@ async def ban(context, member: discord.Member, *, reason=None):
 async def react(context):
     await context.message.channel.send('No Michael, unfortunately this not running on React you fkn nugget')
 
+@client.command(name='cookie')
+async def cookie(context, member: discord.Member):
+    await context.message.channel.send('Cookie send to ' + member.display_name + '.')
+
+@client.command(name='doubleglock9000')
+async def cookie(context, member: discord.Member):
+    await context.message.channel.send('You gave Double Glock 9000 to ' + member.display_name + ', you nasty!')
+
+@client.command(name='glock1000')
+async def cookie(context, member: discord.Member):
+    await context.message.channel.send('You gave Glock 1000 to ' + member.display_name + ', you nasty!')
+
 @client.command(name='sourcecode')
 async def sourcecode(context):
 
         myEmbed = discord.Embed(title="NuggetBot.py", description="NuggetBot.py sourcecode on GitHub", color=0x00ff00)
         myEmbed.add_field(name="Github-link:", value="https://officialjansku.github.io/NuggetBot.github.io/", inline=False)
-        myEmbed.add_field(name="Bot version:", value="V1.0.2", inline=False)
+        myEmbed.add_field(name="Bot version:", value="V1.0.3", inline=False)
         myEmbed.set_author(name="JANSKU")
 
         await context.message.channel.send(embed=myEmbed)
